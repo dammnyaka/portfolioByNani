@@ -2,7 +2,6 @@ export interface Introdata {
   title: string;
   animated: string[];
   description: string;
-  your_img_url: string;
 }
 
 export interface Image {
@@ -31,16 +30,3 @@ export interface Projects {
   video1?: string;
   video2?: string;
 }
-
-// [
-//   {
-//     id: number;
-//     name: string;
-//     instument: string;
-//   },
-//   {
-//     id?: number;
-//     name?: string;
-//     instument?: string;
-//   }?
-// ];

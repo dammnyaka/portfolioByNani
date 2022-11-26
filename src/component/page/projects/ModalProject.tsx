@@ -1,11 +1,10 @@
-import { memo, useEffect, useRef } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { memo, useRef } from "react";
+import { useParams } from "react-router-dom";
 import { projects } from "../../../content-type/conten";
 import "./ModalProject.scss";
 
 const ModalProject = memo(() => {
   const ModalRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate();
 
   // useEffect(() => {
   //   const close = (e: any) => {
@@ -23,12 +22,6 @@ const ModalProject = memo(() => {
   const project = projects[parseInt(id, 10) - 1];
 
   if (!project) return <div className="not_project">NOT PROJECT</div>;
-
-  const back = (e: any) => {
-    e.stopPropagation();
-    navigate("/projects");
-  };
-  console.log(window.navigator);
 
   return (
     <div>
@@ -79,7 +72,6 @@ const ModalProject = memo(() => {
               <img src={project.link4} alt="" />
             </div>
           )}
-          <button onClick={back}>true false</button>
         </div>
       </div>
     </div>
