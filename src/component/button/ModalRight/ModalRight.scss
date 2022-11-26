@@ -1,0 +1,38 @@
+.ModalRight {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 100px;
+  right: 50px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  // z-index: 11;
+  // box-shadow: -3px 3px 1px #221a2b, 3px -3px 1px #16101c;
+  box-shadow: -3px 3px 1px var(--secondary-color), 3px -3px 1px var(--secondary-color);
+  cursor: pointer;
+}
+
+.ModalRight:focus {
+  outline: none;
+  // color: darken($color: #0026ff, $amount: 10%);
+  // text-shadow: 0 1px 0 blue;
+}
+.ModalRight:hover {
+  animation: ModalRight 0.4s linear;
+  outline: none;
+  // color: darken($color: #0026ff, $amount: 5%);
+  // text-shadow: 0 1px 0 blue;
+}
+@keyframes ModalRight {
+  from {
+    box-shadow: -5px 5px 1px var(--secondary-color), 5px -5px 1px var(--secondary-color);
+  }
+  to {
+    box-shadow: 5px -5px 1px var(--secondary-color), -5px 5px 1px var(--secondary-color);
+  }
+}

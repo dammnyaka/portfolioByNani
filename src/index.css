@@ -1,0 +1,111 @@
+[data-theme="dark"] {
+  --filter-color: invert(93%) sepia(94%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+  --bg-color: #0c0c0c;
+  --primary-color: #0d0d0d;
+  --secondary-color: #fff;
+  --card-color: #1d1d1d;
+  --text-color: #fff;
+  --text-color-2: #fff;
+  --overlay-color: rgb(255 255 255 / 30%);
+  --img-color: radial-gradient(
+    closest-side,
+    rgba(35, 61, 103, 1) 20%,
+    rgba(26, 42, 66, 1) 35%,
+    rgba(12, 12, 12, 1) 90%
+  );
+}
+
+[data-theme="light"] {
+  --filter-color: none;
+  --bg-color: #ffffff;
+  --primary-color: #ffffff;
+  --secondary-color: #000;
+  --card-color: #ffffff;
+  --text-color: #000;
+  --text-color-2: #000;
+  --overlay-color: rgb(12 12 12 / 50%);
+
+  --img-color: none;
+  /* --img-color: radial-gradient(
+    closest-side,
+    rgba(230, 229, 229, 1) 10%,
+    rgba(204, 203, 203, 0.7) 20%,
+    rgba(172, 170, 170, 0.4) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ); */
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  /* scrollbar-color: red; */
+}
+
+body::-webkit-scrollbar-track {
+  /* width: 105px; */
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  /* border-radius: 0px; */
+  /* background-color: rgba(56, 56, 56, 0.3); */
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  /* background-color: #1c54bb; */
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 12px;
+  border-radius: 0px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  /* background-color: rgba(255, 255, 255, 0.616); */
+  background-color: var(--overlay-color);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: visible; */
+  background-color: var(--bg-color);
+  /* transition: background-color 0.5s ease; */
+  color: var(--text-color);
+  /* font-family: "Raleway", sans-serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  /* border-left: 10px solid var(--primary-color);
+  border-right: 10px solid var(--primary-color); */
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Marcellus;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+p {
+  /* word-break: break-word; */
+  /* hyphens: auto; */
+}

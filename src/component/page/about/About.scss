@@ -1,0 +1,143 @@
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // width: 100px;
+  height: 5px;
+  // z-index: 999999999;
+  background: var(--text-color);
+  // transform: translateX(100%);
+  animation: shift-rightwards 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.contact-page {
+  overflow: hidden;
+  width: 100%;
+  flex: 1 1;
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+}
+
+.contact-form {
+  text-align: center;
+  width: 50%;
+  // z-index: 2;
+  background-color: #1d1d1d;
+  padding: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  max-width: 80rem;
+
+  .form {
+    width: 100%;
+    padding-top: 5rem;
+    display: block;
+    position: relative;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        margin: 10px;
+      }
+      textarea {
+        width: 100%;
+        border: 0;
+        background: #2b2b2b;
+        height: 50px;
+        font-size: 16px;
+        color: #8d8d8d;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 150px;
+      }
+    }
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 0;
+  background: #2b2b2b;
+  height: 50px;
+  font-size: 16px;
+  color: #8d8d8d;
+  outline: none;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:focus {
+  input::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    color: red;
+  }
+
+  input::after {
+    background-color: red;
+    color: red;
+    margin-top: 2px px;
+    border-bottom: 2px solid #08fdd8;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+}
+
+@keyframes shift-rightwards {
+  0% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  60% {
+    transform: translateX(0%);
+  }
+  // 100% {
+  //   transform: translateX(100%);
+  // }
+}
+
+.map {
+  width: 50%;
+  // position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+.leaflet-bottom {
+  display: none;
+}
+.leaflet-top {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+  }
+}

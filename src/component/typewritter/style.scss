@@ -1,0 +1,32 @@
+.typewritter {
+  display: flex;
+  font-size: 30px;
+  // color: var(--secondary-color);
+  height: 40px;
+  align-items: center;
+}
+
+.flashType {
+  margin-left: 10px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.flashType::after {
+  content: "|";
+  box-sizing: border-box;
+  padding: 2px;
+  animation: stickFlashing 1s infinite;
+}
+
+@keyframes stickFlashing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
