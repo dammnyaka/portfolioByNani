@@ -1,11 +1,5 @@
-// import Home from "../page/home/Home";
-// import About from "../page/about/About";
-// import Projects from "../page/projects/Projects";
-// import ModalProject from "../page/projects/ModalProject";
-// import ModalTest from "../page/projects/ModalTest";
 import LayoutModal from "../modal/LayoutModal";
 import { lazy } from "react";
-import Loader from "../loader";
 import NotPage from "../page/notPage/NotPage";
 
 const Home = lazy(() => {
@@ -32,17 +26,12 @@ const Projects = lazy(() => {
 const About = lazy(() => {
   return new Promise<any>((resolve) => {
     setTimeout(() => {
-      resolve(import("../page/about/About"));
+      resolve(import("../page/contact/Contact"));
     }, 1000);
   });
 });
 
 export const route = [
-  // {
-  //   path: "/",
-  //   exact: true,
-  //   component: Layout,
-  // },
   {
     path: "/home",
     exact: true,

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { myImage } from "./myimage";
 
 const Canvas = () => {
@@ -121,13 +121,6 @@ const Canvas = () => {
     }
   }, []);
 
-  // const sty = {
-  //   // backgroundColor: 'rgb(2, 0, 36)',
-  //   width: "500px",
-  //   height: "90vh",
-  //   backgroundColor: "linear-gradient(#020024, #1f3351, #416092, #1f3351, #020024)",
-  // };
-  // style={{ width: "100%", height: "100vh" }}
   return (
     <div style={{ display: "flex" }}>
       <canvas style={{ width: "600px", height: "760px" }} ref={canvasRef}></canvas>

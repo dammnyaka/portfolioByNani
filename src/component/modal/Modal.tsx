@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
-import ModalLeft from "../button/ModalLeft/ModalLeft";
-import ModalRight from "../button/ModalRight/ModalRight";
+import ModalBack from "../button/ModalBack/ModalBack";
+import ModalNext from "../button/ModalNext/ModalNext";
 import ScrollToTop from "../scrollToTop/ScrollToTop";
 import "./Modal.scss";
 
@@ -20,8 +20,8 @@ const ClickCapturer = ({ onClick, children, ScrollRef, BackgroundRef }: any) => 
   <div ref={ScrollRef} className="click-capturer" onClick={(e) => e.stopPropagation()}>
     <CloseButton onClick={onClick} />
     <ScrollToTop ScrollRef={ScrollRef} BackgroundRef={BackgroundRef} />
-    <ModalRight />
-    <ModalLeft />
+    <ModalNext />
+    <ModalBack />
     {children}
   </div>
 );

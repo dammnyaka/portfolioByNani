@@ -64,19 +64,7 @@ const Typewritter: FC<Props> = ({ props }) => {
 
         return () => clearTimeout(timeout);
     }
-
-    // if (phase === TypePhase.Pausing) return;
   }, [props, qw, typeWritter, phase, indexProps]);
-
-  // const qwe = "Я люблю";
-  // const [asd, setAsd] = useState("");
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setAsd(qwe.slice(0, asd.length + 1));
-  //   }, 10);
-
-  //   return () => clearTimeout(timeout);
-  // }, [asd]);
 
   return (
     <div className="typewritter">

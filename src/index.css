@@ -39,26 +39,15 @@ html,
 body {
   width: 100vw;
   height: 100%;
-  /* scrollbar-color: red; */
-}
-
-body::-webkit-scrollbar-track {
-  /* width: 105px; */
-  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
-  /* border-radius: 0px; */
-  /* background-color: rgba(56, 56, 56, 0.3); */
 }
 
 body::-webkit-scrollbar {
   width: 8px;
-  /* background-color: #1c54bb; */
 }
 
 body::-webkit-scrollbar-thumb {
   width: 12px;
   border-radius: 0px;
-  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
-  /* background-color: rgba(255, 255, 255, 0.616); */
   background-color: var(--overlay-color);
 }
 
@@ -66,15 +55,8 @@ body {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
-  /* overflow-y: visible; */
   background-color: var(--bg-color);
-  /* transition: background-color 0.5s ease; */
   color: var(--text-color);
-  /* font-family: "Raleway", sans-serif; */
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  /* border-left: 10px solid var(--primary-color);
-  border-right: 10px solid var(--primary-color); */
 }
 
 img {
@@ -103,9 +85,4 @@ a {
   text-decoration: none;
   border: none;
   outline: none;
-}
-
-p {
-  /* word-break: break-word; */
-  /* hyphens: auto; */
 }

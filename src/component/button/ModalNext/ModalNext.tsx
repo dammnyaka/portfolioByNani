@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { projects } from "../../../content-type/conten";
-import "./ModalRight.scss";
+import "./ModalNext.scss";
 
-const ModalRight = () => {
+const ModalNext = () => {
   const { id } = useParams<Record<string, string | undefined>>();
   const navigate = useNavigate();
 
@@ -16,10 +16,10 @@ const ModalRight = () => {
   };
 
   return (
-    <button onClick={NextProject} type="button" className="ModalRight">
-      Right
+    <button onClick={NextProject} type="button" className="ModalNext">
+      Next
     </button>
   );
 };
 
-export default ModalRight;
+export default ModalNext;

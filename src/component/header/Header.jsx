@@ -1,5 +1,5 @@
 import { memo, useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Themetoggle from "../themetoggle";
 import "./Header.scss";
@@ -13,19 +13,6 @@ const Header = memo(() => {
   const [pause, setPause] = useState(true);
 
   const plays = () => {
-    // setItPlay(!itPlay);
-    // if (!itPlay && pause === false) {
-    //   audioPlayer.current.play();
-    //   console.log("play");
-    // } else if (pause === true) {
-    //   audioPlayer.current.pause();
-    //   setPause(false);
-    //   setItPlay(false);
-    //   console.log("play pause");
-    // } else {
-    //   audioPlayer.current.pause();
-    //   console.log("pause");
-    // }
     if (itPlay === false && pause === false) {
       audioPlayer.current.pause();
       console.log("pause");
@@ -90,7 +77,6 @@ const Header = memo(() => {
               CONTACT
             </NavLink>
           </li>
-          {/* <li className="animate start"></li> */}
         </ul>
       </nav>
     </header>

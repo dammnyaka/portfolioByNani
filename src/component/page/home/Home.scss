@@ -1,5 +1,7 @@
+.home {
+  // height: calc(100vh - 60px);
+}
 .home_main {
-  // width: 100vw;
   height: calc(100vh - 60px);
   margin: 0;
   display: flex;
@@ -15,17 +17,9 @@
 
 .home_img {
   background-image: var(--img-color);
-  // background: red;
-  // width: 100%;
-  // transition: background-image 5s ease;
-  // width: 30%;
-  // opacity: 1;
-  // -webkit-transition: opacity 3s ease-out;
-  // transition: opacity 3s ease-out;
 
   img {
     display: block;
-    // vertical-align: top;
     width: 100%;
     height: calc(100% - 60px);
   }
@@ -36,12 +30,10 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    // height: calc(90vh - 60px);
     overflow: hidden;
   }
   .home_type {
     width: 80%;
-    // height: 25%;
   }
   .home_img {
     width: 100%;

@@ -14,6 +14,13 @@ const MainPage = lazy(() => {
     }, 1000);
   });
 });
+const TemporaryPage = lazy(() => {
+  return new Promise<any>((resolve) => {
+    setTimeout(() => {
+      resolve(import("../page/TemporaryPage"));
+    }, 1000);
+  });
+});
 
 const Router: FC = () => {
   const location = useLocation();
@@ -26,7 +33,8 @@ const Router: FC = () => {
           path="/"
           element={
             <Suspense fallback={<Loader />}>
-              <MainPage />
+              {/* <MainPage /> */}
+              <TemporaryPage />
             </Suspense>
           }
         />
@@ -45,7 +53,6 @@ const Router: FC = () => {
             />
           );
         })}
-        {/* <Route path="*" element={<NotPage />} /> */}
       </Routes>
       {state?.backgroundLocation && (
         <Routes>

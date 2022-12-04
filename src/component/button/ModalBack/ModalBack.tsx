@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { projects } from "../../../content-type/conten";
-import "./ModalLeft.scss";
+import "./ModalBack.scss";
 
-const ModalLeft = () => {
+const ModalBack = () => {
   const { id } = useParams<Record<string, string | undefined>>();
   const navigate = useNavigate();
 
@@ -17,10 +17,10 @@ const ModalLeft = () => {
   };
 
   return (
-    <button onClick={BackProject} type="button" className="ModalLeft">
-      Left
+    <button onClick={BackProject} type="button" className="ModalBack">
+      Back
     </button>
   );
 };
 
-export default ModalLeft;
+export default ModalBack;

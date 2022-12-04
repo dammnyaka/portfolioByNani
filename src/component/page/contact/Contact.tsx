@@ -1,20 +1,14 @@
 import { useRef, useState } from "react";
-import "./About.scss";
-// import emailjs from "emailjs-com";
 import emailjs from "@emailjs/browser";
 import Map from "../../Map/Map";
 
-// import { TileLayer } from "react-leaflet/lib/TileLayer";
-// import { MapContainer } from "react-leaflet/lib/MapContainer";
-// import { TileLayer } from "react-leaflet/lib/TileLayer";
+import "./Contact.scss";
 
-const About = () => {
+const Contact = () => {
   const form = useRef<any>();
 
   const [formData, setFormdata] = useState({
     loading: false,
-    show: false,
-    variant: "",
   });
 
   const handleSubmit = (e: any) => {
@@ -30,30 +24,19 @@ const About = () => {
       )
       .then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          setFormdata({ ...formData, [e.target.name]: "", loading: false });
+          // console.log("SUCCESS!", response.status, response.text);
+          setFormdata({ ...formData, loading: false });
         },
         function (error) {
-          console.log("FAILED...", error);
+          // console.log("FAILED...", error);
           setTimeout(() => {
             setFormdata({ ...formData, loading: false });
           }, 5000);
         }
       );
-    // console.log(form.current.from_email);
-    // setTimeout(() => {
-    //   setFormdata({ ...formData, loading: false });
-    // }, 5000);
 
     e.target.reset();
   };
-
-  // const position: any = [51.505, -0.09];
-
-  // var OpenStreetMap_Mapnik = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  //   maxZoom: 19,
-  //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  // });
 
   return (
     <div className="contact-page">
@@ -79,8 +62,6 @@ const About = () => {
           </form>
         </div>
       </div>
-      {/* 
-      <div className="loading-bar"></div> */}
       <div className="map">
         <Map />
       </div>
@@ -88,4 +69,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

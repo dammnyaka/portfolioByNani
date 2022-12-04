@@ -3,12 +3,11 @@ import { FC, useState } from "react";
 import Canvas from "../canvas";
 
 const Layout: FC = () => {
-  const [a, setA] = useState(true);
   return (
     <div>
-      {a && <Canvas />}
+      <Canvas />
       <Link to="/home">
-        <button onClick={() => setA(false)}>asd</button>
+        <button>asd</button>
       </Link>
     </div>
   );
