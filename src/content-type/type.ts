@@ -10,6 +10,12 @@ export interface Image {
   imageLight: string;
 }
 
+export interface Social {
+  name: string;
+  link: string;
+  icon: string;
+}
+
 type Instrument = {
   id: number;
   name: string;

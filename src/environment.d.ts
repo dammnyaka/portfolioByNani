@@ -1,8 +1,9 @@
-// export declare module "*.module.css";
-// export declare module "*.jpg";
-// export declare module "*.png";
-// export declare module "*.jpeg";
-// export declare module "*.gif";
+export declare module "*.module.css";
+export declare module "*.jpg";
+export declare module "*.png";
+export declare module "*.jpeg";
+export declare module "*.gif";
+export declare module "*.svg";
 
 declare global {
   namespace NodeJS {

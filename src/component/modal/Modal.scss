@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  /* width: 100vw; */
-  /* height: 100vh; */
   overflow-y: auto;
   padding: 0;
   margin: 0;
@@ -27,20 +25,14 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.click-capturer {
+.click_capturer {
   width: 70%;
-  // display: inline-block;
-  // position: relative;
   height: fit-content;
   top: 50px;
   right: 50px;
-  // z-index: 12;
-  // cursor: pointer;
-  // margin: 15px;
-  // margin-top: 20vh;
 }
 
-.CloseProject {
+.close_project {
   position: fixed;
   width: 30px;
   height: 30px;
@@ -53,24 +45,18 @@
   font-weight: 700;
   line-height: 1;
   text-shadow: 0 1px 0 #fff;
-  // z-index: 11;
-  // box-shadow: -3px 3px 1px #221a2b, 3px -3px 1px #16101c;
   box-shadow: -3px 3px 1px var(--secondary-color), 3px -3px 1px var(--secondary-color);
   cursor: pointer;
 }
 
-.CloseProject:focus {
+.close_project:focus {
   outline: none;
-  // color: darken($color: #0026ff, $amount: 10%);
-  // text-shadow: 0 1px 0 blue;
 }
-.CloseProject:hover {
-  animation: CloseProject 0.4s linear;
+.close_project:hover {
+  animation: close_project 0.4s linear;
   outline: none;
-  // color: darken($color: #0026ff, $amount: 5%);
-  // text-shadow: 0 1px 0 blue;
 }
-@keyframes CloseProject {
+@keyframes close_project {
   from {
     box-shadow: -5px 5px 1px var(--secondary-color), 5px -5px 1px var(--secondary-color);
   }
@@ -79,12 +65,12 @@
   }
 }
 
-.CloseProject:after {
+.close_project:after {
   content: "×";
 }
 
 @media (max-width: 1025px) {
-  .click-capturer {
+  .click_capturer {
     width: 100%;
   }
 }

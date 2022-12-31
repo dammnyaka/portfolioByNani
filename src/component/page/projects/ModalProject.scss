@@ -3,7 +3,6 @@
 }
 
 .modal {
-  // box-shadow: 0px 0px 5px var(--secondary-color), 0px 0px 5px var(--secondary-color);
   img {
     width: 100%;
   }
@@ -17,19 +16,9 @@
     margin: 0;
   }
 }
-.video {
-  // width: 100%;
-  video {
-    width: 100%;
-    // max-width: 1200px;
-  }
-}
 
 .sidebar_user_name {
   margin: 20px 0;
-  // z-index: 1;
-  // box-shadow: 0px 0px 5px var(--secondary-color), 0px 0px 5px var(--secondary-color);
-  // opacity: 0.9;
   color: white;
   letter-spacing: 0.3em;
   font-size: 24px;

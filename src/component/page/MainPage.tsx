@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FC, useState } from "react";
+import { FC } from "react";
 import Canvas from "../canvas";
 
 const Layout: FC = () => {

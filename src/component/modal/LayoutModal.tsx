@@ -1,5 +1,6 @@
 import { useEffect, FC, lazy, Suspense } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import Loader from "../loader";
 import Modal from "./Modal";
 
@@ -8,24 +9,22 @@ const ModalProject = lazy(async () => {
   return import("../page/projects/ModalProject");
 });
 
-// const ModalProject = lazy(() => {
-//   return new Promise<any>((resolve) => {
-//     setTimeout(() => {
-//       resolve(import("../page/projects/ModalProject"));
-//     }, 1000);
-//   });
-// });
-
-const NewModal: FC = () => {
+const LayoutModal: FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const closeModal = () => {
-    document.body.style.overflow = "";
-    navigate("/projects");
+    const locationArr = location.pathname?.split("/") ?? [];
+    const loc = locationArr[1] === "projects" ? "/projects" : "/";
+    navigate(loc);
   };
 
   return (
@@ -39,4 +38,4 @@ const NewModal: FC = () => {
   );
 };
 
-export default NewModal;
+export default LayoutModal;

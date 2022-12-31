@@ -1,6 +1,13 @@
-import LayoutModal from "../modal/LayoutModal";
 import { lazy } from "react";
 import NotPage from "../page/notPage/NotPage";
+
+const TemporaryPage = lazy(() => {
+  return new Promise<any>((resolve) => {
+    setTimeout(() => {
+      resolve(import("../page/TemporaryPage"));
+    }, 1000);
+  });
+});
 
 const Home = lazy(() => {
   return new Promise<any>((resolve) => {
@@ -9,6 +16,7 @@ const Home = lazy(() => {
     }, 1000);
   });
 });
+
 const Projects = lazy(() => {
   return new Promise<any>((resolve) => {
     setTimeout(() => {
@@ -16,14 +24,7 @@ const Projects = lazy(() => {
     }, 1000);
   });
 });
-// const LayoutModal = lazy(() => {
-//   return new Promise<any>((resolve) => {
-//     setTimeout(() => {
-//       resolve(import("../modal/LayoutModal"));
-//     }, 1000);
-//   });
-// });
-const About = lazy(() => {
+const Contact = lazy(() => {
   return new Promise<any>((resolve) => {
     setTimeout(() => {
       resolve(import("../page/contact/Contact"));
@@ -33,28 +34,26 @@ const About = lazy(() => {
 
 export const route = [
   {
-    path: "/home",
-    exact: true,
+    path: "/",
+    component: TemporaryPage,
+  },
+  {
+    path: "/about",
+    name: "ABOUT",
     component: Home,
   },
   {
     path: "/projects",
-    exact: true,
+    name: "PROJECTS",
     component: Projects,
   },
   {
-    path: "/projects/:id",
-    exact: false,
-    component: LayoutModal,
-  },
-  {
-    path: "/about",
-    exact: true,
-    component: About,
+    path: "/contact",
+    name: "CONTACT",
+    component: Contact,
   },
   {
     path: "*",
-    exact: true,
     component: NotPage,
   },
 ];

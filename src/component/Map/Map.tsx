@@ -1,34 +1,52 @@
-import { Marker, Popup, TileLayer, MapContainer } from "react-leaflet";
-// import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import { useContext } from "react";
 import { ThemeContext } from "../theme/Theme";
-type Props = {};
+import { motion } from "framer-motion";
 
-const Map = (props: Props) => {
+import { Marker, Popup, TileLayer, MapContainer } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+const markerIcon = new L.Icon({
+  iconUrl: require("../../assets/img/marker.png"),
+  iconSize: [35, 35],
+});
+
+const Map = () => {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
 
   return (
     <>
       <MapContainer
         style={{ width: "100%", height: "100%" }}
         center={[55.75222, 37.61556]}
-        zoom={13}
+        zoom={12}
         scrollWheelZoom={true}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          // attribution='&copy; <a href="https://www.openstreetmap.org/copyright"></a> contributors'
           url={`https://{s}.tile.jawg.io/jawg-${
             theme === "dark" ? "dark" : "light"
           }/{z}/{x}/{y}{r}.png?access-token={accessToken}`}
           accessToken={process.env.REACT_APP_MAP_ID}
         />
-        <Marker position={[55.75222, 37.61556]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        <motion.div
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            opacity: 1,
+            zIndex: 10,
+          }}
+        >
+          <Marker position={[55.75222, 37.61556]} icon={markerIcon}>
+            <Popup>
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit
+            </Popup>
+          </Marker>
+        </motion.div>
       </MapContainer>
     </>
   );

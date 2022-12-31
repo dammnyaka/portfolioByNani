@@ -14,6 +14,17 @@
 }
 .header_button {
   display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-evenly;
+  z-index: 2;
+  svg {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    stroke: var(--secondary-color);
+    position: relative;
+  }
 }
 .header_button_music {
   background-color: transparent;
@@ -22,6 +33,30 @@
   cursor: pointer;
   outline: none;
   padding: 0;
+}
+
+.soundOff {
+  &::after {
+    content: "";
+    width: 30px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 29px;
+    display: block;
+    height: 2px;
+    background-color: var(--secondary-color);
+    animation: sound 0.15s ease-in;
+  }
+}
+@keyframes sound {
+  from {
+    width: 0;
+    top: 15px;
+  }
+  to {
+    width: 30px;
+    top: 29px;
+  }
 }
 .header_button_img {
   width: 26px;
@@ -41,7 +76,9 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    li {
+      cursor: pointer;
+    }
   }
   ul li a {
     position: relative;
@@ -73,20 +110,23 @@
   cursor: default;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1024px) and (max-width: 1224px) {
   .header_nav {
-    width: 55%;
+    width: 30%;
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (max-width: 1023px) {
   .header_nav {
+    width: auto;
+    .header_ul {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .header_button {
     width: 40%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .header_nav {
-    width: 35%;
+    justify-content: space-evenly;
   }
 }

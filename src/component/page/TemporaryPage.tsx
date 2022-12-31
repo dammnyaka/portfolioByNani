@@ -1,18 +1,20 @@
-import Header from "../header/Header";
+import { memo } from "react";
+import { Outlet } from "react-router-dom";
 import About from "./contact/Contact";
 import Home from "./home/Home";
 import Project from "./projects/Projects";
 
-const Pricol = () => {
+const TemporaryPage = memo(() => {
   return (
-    <div>
-      <Header />
+    <>
       <Home />
       <div style={{ height: "60px" }}></div>
       <Project />
+      {/* <Outlet /> */}
+      <div style={{ height: "60px" }}></div>
       <About />
-    </div>
+    </>
   );
-};
+});
 
-export default Pricol;
+export default memo(TemporaryPage);

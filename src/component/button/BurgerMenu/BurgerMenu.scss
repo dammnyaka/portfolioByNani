@@ -1,0 +1,49 @@
+.brg-main {
+  display: none;
+  top: 0px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.btn-container {
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
+}
+
+.container {
+  ul {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.social {
+  filter: var(--filter-social);
+  :hover {
+    filter: var(--filter-social-hover);
+  }
+}
+
+@media (max-width: 1023px) {
+  .brg-main {
+    display: flex;
+  }
+}

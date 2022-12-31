@@ -1,13 +1,14 @@
-import { ReactNode, useRef } from "react";
+import React, { ReactNode, useRef } from "react";
 import ModalBack from "../button/ModalBack/ModalBack";
 import ModalNext from "../button/ModalNext/ModalNext";
-import ScrollToTop from "../scrollToTop/ScrollToTop";
+import ScrollToTop from "../button/scrollToTop/ScrollToTop";
+
 import "./Modal.scss";
 
 interface BackgroundI {
   onClick: () => void;
   children: ReactNode;
-  BackgroundRef: any;
+  BackgroundRef: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 const Background = ({ children, onClick, BackgroundRef }: BackgroundI) => (
@@ -16,8 +17,15 @@ const Background = ({ children, onClick, BackgroundRef }: BackgroundI) => (
   </div>
 );
 
-const ClickCapturer = ({ onClick, children, ScrollRef, BackgroundRef }: any) => (
-  <div ref={ScrollRef} className="click-capturer" onClick={(e) => e.stopPropagation()}>
+interface ClickCapturerI {
+  onClick: () => void;
+  children: ReactNode;
+  ScrollRef: React.MutableRefObject<HTMLDivElement | null>;
+  BackgroundRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+const ClickCapturer = ({ onClick, children, ScrollRef, BackgroundRef }: ClickCapturerI) => (
+  <div ref={ScrollRef} className="click_capturer" onClick={(e) => e.stopPropagation()}>
     <CloseButton onClick={onClick} />
     <ScrollToTop ScrollRef={ScrollRef} BackgroundRef={BackgroundRef} />
     <ModalNext />
@@ -26,7 +34,13 @@ const ClickCapturer = ({ onClick, children, ScrollRef, BackgroundRef }: any) => 
   </div>
 );
 
-const CloseButton = ({ onClick }: any) => <button type="button" onClick={onClick} className="CloseProject"></button>;
+interface CloseButtonI {
+  onClick: () => void;
+}
+
+const CloseButton = ({ onClick }: CloseButtonI) => (
+  <button type="button" onClick={onClick} className="close_project"></button>
+);
 
 interface ModalI {
   children: ReactNode;
@@ -34,8 +48,8 @@ interface ModalI {
 }
 
 const Modal = ({ children, close }: ModalI) => {
-  const ScrollRef = useRef();
-  const BackgroundRef = useRef();
+  const ScrollRef = useRef(null);
+  const BackgroundRef = useRef(null);
 
   return (
     <Background onClick={close} BackgroundRef={BackgroundRef}>

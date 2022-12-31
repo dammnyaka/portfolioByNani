@@ -1,29 +1,67 @@
 .ModalBack {
-  position: fixed;
   width: 30px;
   height: 30px;
-  top: 150px;
-  right: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50px;
   color: #fff;
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 1;
-  text-shadow: 0 1px 0 #fff;
-  box-shadow: -3px 3px 1px var(--secondary-color), 3px -3px 1px var(--secondary-color);
+  letter-spacing: 10px;
   cursor: pointer;
 }
 
-.ModalBack:hover {
-  animation: ModalBack 0.4s linear;
-  outline: none;
+.arrow_back {
+  width: 16px;
+  height: 15px;
+  border-top: 2px solid #ffffff !important;
+  border-right: 2px solid #ffffff !important;
+  transition: 1s;
+  transform: translateY(0px) rotate(-135deg);
 }
-@keyframes ModalBack {
-  from {
-    box-shadow: -5px 5px 1px var(--secondary-color), 5px -5px 1px var(--secondary-color);
+.arrow_back:nth-child(1) {
+  right: -0.5px;
+}
+.arrow_back:nth-child(2) {
+  right: -1px;
+}
+
+.arrow_back::after {
+  content: ".";
+  opacity: 1;
+  color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(3px);
+  width: 5px;
+  height: 5px;
+}
+
+.ModalBack:hover {
+  .arrow_back {
+    animation: arrowBack 0.7s infinite linear;
   }
-  to {
-    box-shadow: 5px -5px 1px var(--secondary-color), -5px 5px 1px var(--secondary-color);
+}
+
+@keyframes arrowBack {
+  0% {
+    opacity: 0;
+    transform: translateX(10px) rotate(-135deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0px) rotate(-135deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10px) rotate(-135deg);
+  }
+}
+
+@media (max-width: 425px) {
+  .ModalBack {
+    display: none;
   }
 }
