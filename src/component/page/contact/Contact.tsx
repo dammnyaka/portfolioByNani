@@ -98,10 +98,10 @@ const Contact = () => {
                 <textarea name="message" placeholder="Message...." required />
                 <span className="form_line"></span>
               </motion.li>
-              <motion.button className="form_button" variants={secVariant} custom={3} type="submit">
-                {loading ? "Sending..." : "Send"}
-              </motion.button>
             </ul>
+            <motion.button className="form_button" variants={secVariant} custom={3} type="submit">
+              {loading ? "Sending..." : "Send"}
+            </motion.button>
           </form>
         </motion.section>
       </motion.div>

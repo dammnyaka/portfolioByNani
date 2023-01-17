@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { ThemeContext } from "../theme/Theme";
 import { motion } from "framer-motion";
 
@@ -11,8 +11,18 @@ const markerIcon = new L.Icon({
   iconSize: [35, 35],
 });
 
+const light = "https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}";
+const dark = "https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}";
+
 const Map = () => {
   const { theme } = useContext(ThemeContext);
+  const ref = useRef<any>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.setUrl(theme === "light" ? light : dark);
+    }
+  }, [theme]);
 
   return (
     <>
@@ -23,10 +33,9 @@ const Map = () => {
         scrollWheelZoom={true}
       >
         <TileLayer
-          // attribution='&copy; <a href="https://www.openstreetmap.org/copyright"></a> contributors'
-          url={`https://{s}.tile.jawg.io/jawg-${
-            theme === "dark" ? "dark" : "light"
-          }/{z}/{x}/{y}{r}.png?access-token={accessToken}`}
+          ref={ref}
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright"></a> contributors'
+          url={theme === "light" ? light : dark}
           accessToken={process.env.REACT_APP_MAP_ID}
         />
         <motion.div
@@ -40,7 +49,7 @@ const Map = () => {
             zIndex: 10,
           }}
         >
-          <Marker position={[55.75222, 37.61556]} icon={markerIcon}>
+          <Marker position={[55.75222, 37.62157]} icon={markerIcon}>
             <Popup>
               Lorem ipsum dolor sit amet, <br />
               consectetur adipiscing elit
