@@ -69,7 +69,7 @@ const Contact = () => {
         initial="closed"
         whileInView="open"
         exit="closed"
-        viewport={{ amount: 0.5 }}
+        viewport={{ amount: 0.4 }}
         variants={{ closed: { opacity: 0, transition: { delay: 0.15 } }, open: { opacity: 1 } }}
         className="contact-form"
       >
@@ -106,8 +106,10 @@ const Contact = () => {
         </motion.section>
       </motion.div>
       <motion.div
+        whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        viewport={{ amount: 0.4 }}
+        // animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.15 }}
         className="map"
