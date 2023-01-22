@@ -1,12 +1,12 @@
 import { FC, useContext } from "react";
-import { ThemeContext } from "../../theme/Theme";
+import { ThemeContext, ThemeContextType } from "../../theme/Theme";
 
 import "./style.scss";
 import moon from "../../../assets/img/moon-theme-toggle.svg";
 import sun from "../../../assets/img/sun-theme-toggle.svg";
 
 const Themetoggle: FC = () => {
-  const { themetoggle, theme } = useContext(ThemeContext);
+  const { themetoggle, theme } = useContext(ThemeContext) as ThemeContextType;
 
   return (
     <div className="nav">

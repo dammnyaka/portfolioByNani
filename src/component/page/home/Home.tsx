@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../theme/Theme";
+import { ThemeContext, ThemeContextType } from "../../theme/Theme";
 import { motion } from "framer-motion";
 
 import Typewritter from "../../typewritter";
@@ -37,7 +37,7 @@ const homeVariants = {
 };
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) as ThemeContextType;
 
   return (
     <motion.div initial="initial" animate="animate" exit="exit" variants={homeVariants} className="home">

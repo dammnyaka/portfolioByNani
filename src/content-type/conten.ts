@@ -117,7 +117,7 @@ const projects: Projects[] = [
   {
     id: 5,
     name: "White witch",
-    prev: "https://mir-s3-cdn-cf.behance.net/projects/404/acbaa9138752509.Y3JvcCwxMDE0LDc5MywxOTMsNzA.jpg",
+    prev: "https://mir-s3-cdn-cf.behance.net/projects/404/8cc092138752509.Y3JvcCw4NzAsNjgwLDI2NCwxMjc.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c1d6ef138752509.6223559a534ba.png",
     link1: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/730ad4138752509.6223559a9a714.png",
     link2: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/68e1db138752509.6223559a99929.png",
@@ -260,7 +260,7 @@ const projects: Projects[] = [
   {
     id: 12,
     name: "White witch",
-    prev: "	https://mir-s3-cdn-cf.behance.net/projects/404/acbaa9138752509.Y3JvcCwxMDE0LDc5MywxOTMsNzA.jpg",
+    prev: "https://mir-s3-cdn-cf.behance.net/projects/404/8cc092138752509.Y3JvcCw4NzAsNjgwLDI2NCwxMjc.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c1d6ef138752509.6223559a534ba.png",
     link1: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/730ad4138752509.6223559a9a714.png",
     link2: "	https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/68e1db138752509.6223559a99929.png",

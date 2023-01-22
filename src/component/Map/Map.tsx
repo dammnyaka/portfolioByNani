@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import { ThemeContext } from "../theme/Theme";
+import { ThemeContext, ThemeContextType } from "../theme/Theme";
 import { motion } from "framer-motion";
 
 import { Marker, Popup, TileLayer, MapContainer } from "react-leaflet";
@@ -15,7 +15,7 @@ const light = "https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-tok
 const dark = "https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}";
 
 const Map = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext) as ThemeContextType;
   const ref = useRef<any>(null);
 
   useEffect(() => {

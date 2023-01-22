@@ -1,6 +1,11 @@
 import { useState, useEffect, createContext, PropsWithChildren, FC } from "react";
 
-export const ThemeContext = createContext<any>("");
+export type ThemeContextType = {
+  theme: string;
+  themetoggle: () => void;
+};
+
+export const ThemeContext = createContext<null | ThemeContextType>(null);
 
 const Theme: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<string>(localStorage.getItem("theme") || "dark");
