@@ -94,8 +94,8 @@ const projects: Projects[] = [
   {
     id: 4,
     name: "Логотип строительной организации",
-    prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/63a090158743477.Y3JvcCwyNDQ2LDE5MTMsNjM1LDE2MjM2.png",
-    link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f869a3158743477.639107168824b.png",
+    prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/421ac5158743477.Y3JvcCwyMzIzLDE4MTcsMzkxLDExNTI5.png",
+    link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5cdb8f158743477.63d7ae07bf551.png",
     instuments: [
       {
         id: 1,
@@ -116,6 +116,24 @@ const projects: Projects[] = [
   },
   {
     id: 5,
+    name: "Logo design for a handmade jewelry brand",
+    prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/fd325f161902863.Y3JvcCwyMjExLDE3MjksNTU4LDIzNQ.png",
+    link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5ed043161902863.63cd321d2be00.png",
+    instuments: [
+      {
+        id: 1,
+        name: "Photoshop",
+        instument: "https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg",
+      },
+      {
+        id: 3,
+        name: "Figma",
+        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+      },
+    ],
+  },
+  {
+    id: 6,
     name: "White witch",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/8cc092138752509.Y3JvcCw4NzAsNjgwLDI2NCwxMjc.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c1d6ef138752509.6223559a534ba.png",
@@ -142,7 +160,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: "Брошура для цветочного магазина",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/5cb85b137309829.Y3JvcCwyNTU2LDIwMDAsNDM2LDA.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a407cd137309829.62092ce7bdb51.jpg",
@@ -160,7 +178,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: "Food line icons for healthy food app",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/9bb32b137300931.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/30636d137300931.62090a0535e7f.jpg",
@@ -182,7 +200,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: "Instagram carousel",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/ba3070157933297.Y3JvcCwxNzg1LDEzOTYsOTcsMzk3OA.png",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/a326f2157933297.63822d1f32962.png",
@@ -200,7 +218,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     name: "Budget Planner",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/fba738150441035.Y3JvcCwxMzk2LDEwOTIsMjI4LDQ2NTg.png",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/dec5a0150441035.62fa7c10ccdd1.png",
@@ -213,7 +231,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     name: "Landing Page Yoga",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d7a958142842817.Y3JvcCwxMDQwLDgxNCwxNTQsMzQ3Mg.png",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d63c9b142842817.626f02776c969.png",
@@ -232,7 +250,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     name: "Concept Sony Playstation 5",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/94419e141707329.Y3JvcCw3NTEsNTg3LDMzOCw5Mjgw.png",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7516c4141707329.6258a9e521635.png",
@@ -258,7 +276,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     name: "White witch",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/8cc092138752509.Y3JvcCw4NzAsNjgwLDI2NCwxMjc.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c1d6ef138752509.6223559a534ba.png",
@@ -285,7 +303,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     name: "Брошура для цветочного магазина",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/5cb85b137309829.Y3JvcCwyNTU2LDIwMDAsNDM2LDA.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a407cd137309829.62092ce7bdb51.jpg",
@@ -303,7 +321,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     name: "Food line icons for healthy food app",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/404/9bb32b137300931.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/30636d137300931.62090a0535e7f.jpg",
@@ -325,7 +343,7 @@ const projects: Projects[] = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     name: "Instagram carousel",
     prev: "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/ba3070157933297.Y3JvcCwxNzg1LDEzOTYsOTcsMzk3OA.png",
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/a326f2157933297.63822d1f32962.png",
