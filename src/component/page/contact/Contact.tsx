@@ -47,11 +47,9 @@ const Contact = () => {
       )
       .then(
         function (response) {
-          // console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
         },
         function (error) {
-          // console.log("FAILED...", error);
           const interval = setTimeout(() => {
             setLoading(false);
           }, 4000);
@@ -109,7 +107,6 @@ const Contact = () => {
         whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
         viewport={{ amount: 0.4 }}
-        // animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.15 }}
         className="map"

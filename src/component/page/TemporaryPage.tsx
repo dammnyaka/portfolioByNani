@@ -1,5 +1,4 @@
 import { memo } from "react";
-import { Outlet } from "react-router-dom";
 import About from "./contact/Contact";
 import Home from "./home/Home";
 import Project from "./projects/Projects";
@@ -10,7 +9,6 @@ const TemporaryPage = memo(() => {
       <Home />
       <div style={{ height: "60px" }}></div>
       <Project />
-      {/* <Outlet /> */}
       <div style={{ height: "60px" }}></div>
       <About />
     </>

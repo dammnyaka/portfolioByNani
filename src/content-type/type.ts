@@ -16,7 +16,7 @@ export interface Social {
   icon: string;
 }
 
-type Instrument = {
+export type Instrument = {
   id: number;
   name: string;
   instument: string;

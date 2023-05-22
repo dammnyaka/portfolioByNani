@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { ThemeContext, ThemeContextType } from "../../theme/Theme";
 import { motion } from "framer-motion";
 
+import { ThemeContext, ThemeContextType } from "../../theme/Theme";
 import Typewritter from "../../typewritter";
+
 import { img, introdata } from "../../../content-type/conten";
 import "./Home.scss";
 

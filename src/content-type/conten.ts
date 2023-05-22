@@ -87,7 +87,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -110,7 +110,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -128,7 +128,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -155,7 +155,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -173,7 +173,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -271,7 +271,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -298,7 +298,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },
@@ -316,7 +316,7 @@ const projects: Projects[] = [
       {
         id: 3,
         name: "Figma",
-        instument: "https://cdn.worldvectorlogo.com/logos/figma-1.svg",
+        instument: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/53px-Figma-logo.svg.png",
       },
     ],
   },

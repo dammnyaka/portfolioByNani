@@ -1,6 +1,8 @@
 import React, { ReactNode, useRef } from "react";
+
 import ModalBack from "../button/ModalBack/ModalBack";
 import ModalNext from "../button/ModalNext/ModalNext";
+
 import ScrollToTop from "../button/scrollToTop/ScrollToTop";
 
 import "./Modal.scss";
@@ -34,12 +36,8 @@ const ClickCapturer = ({ onClick, children, ScrollRef, BackgroundRef }: ClickCap
   </div>
 );
 
-interface CloseButtonI {
-  onClick: () => void;
-}
-
-const CloseButton = ({ onClick }: CloseButtonI) => (
-  <button type="button" onClick={onClick} className="close_project"></button>
+const CloseButton = ({ onClick }: { onClick: () => void }) => (
+  <button type="button" onClick={onClick} className="close_project" />
 );
 
 interface ModalI {

@@ -1,4 +1,4 @@
-import { useState, useCallback, MouseEvent, memo } from "react";
+import { useState, useCallback, MouseEvent } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -23,9 +23,9 @@ const var1 = {
   },
 };
 
-const Project = memo(() => {
+const Project = () => {
   const location = useLocation();
-  const LocOnAnimate =
+  const LocOnAnimate: any =
     location.pathname === "/projects" ||
     location.pathname === "/about" ||
     location.pathname === "/contact" ||
@@ -35,7 +35,7 @@ const Project = memo(() => {
   const [activeIcon, setActiveIcon] = useState<string>("");
   const [animate, setAnimate] = useState(false);
 
-  const FilterClick = useCallback(
+  const FilterProject = useCallback(
     (e: MouseEvent, name: string) => {
       e.preventDefault();
       setAnimate(true);
@@ -64,8 +64,8 @@ const Project = memo(() => {
           className="projects_ul"
         >
           <AnimatePresence mode="wait">
-            {dbProjects.map((i) => (
-              <ProjectCard key={i.id} i={i} FilterClick={FilterClick} activeIcon={activeIcon} />
+            {dbProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} FilterProject={FilterProject} activeIcon={activeIcon} />
             ))}
           </AnimatePresence>
         </motion.ul>
@@ -73,6 +73,6 @@ const Project = memo(() => {
       <Outlet />
     </div>
   );
-});
+};
 
-export default memo(Project);
+export default Project;
