@@ -16,25 +16,25 @@ const Routers: FC = () => {
     <>
       <Header />
       <Layout>
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            {route.map((rout) => {
-              return (
-                <Route
-                  key={`route ${rout.path}`}
-                  path={rout.path}
-                  element={
-                    <Suspense fallback={<Loader />}>
-                      <rout.component />
-                    </Suspense>
-                  }
-                >
-                  <Route path=":id" element={<LayoutModal />} />
-                </Route>
-              );
-            })}
-          </Routes>
-        </AnimatePresence>
+        {/* <AnimatePresence mode="wait"> */}
+        <Routes location={location} key={location.pathname}>
+          {route.map((rout) => {
+            return (
+              <Route
+                key={`route ${rout.path}`}
+                path={rout.path}
+                element={
+                  <Suspense fallback={<Loader />}>
+                    <rout.component />
+                  </Suspense>
+                }
+              >
+                <Route path=":id" element={<LayoutModal />} />
+              </Route>
+            );
+          })}
+        </Routes>
+        {/* </AnimatePresence> */}
       </Layout>
     </>
   );

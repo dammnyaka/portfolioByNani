@@ -41,8 +41,18 @@ const Home = () => {
   const { theme } = useContext(ThemeContext) as ThemeContextType;
 
   return (
-    <motion.div initial="initial" animate="animate" exit="exit" variants={homeVariants} className="home">
-      <motion.div initial="hidden" animate="visible" className="home_main">
+    <motion.div
+      // initial="initial"
+      //  animate="animate"
+      //   exit="exit"
+      //    variants={homeVariants}
+      className="home"
+    >
+      <motion.div
+        // initial="hidden"
+        //  animate="visible"
+        className="home_main"
+      >
         <div className="home_type">
           <motion.h3 variants={homeAnimation} custom={1}>
             {introdata.title}

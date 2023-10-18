@@ -55,19 +55,19 @@ const Project = () => {
     <div className="projects">
       <div className="projects_layout">
         <motion.ul
-          initial={LocOnAnimate && "closed"}
-          exit={LocOnAnimate ? "closed" : ""}
+          // initial={LocOnAnimate && "closed"}
+          // exit={LocOnAnimate ? "closed" : ""}
           animate={animate && "open"}
           whileInView={"open"}
           viewport={{ amount: 0.1 }}
           variants={var1}
           className="projects_ul"
         >
-          <AnimatePresence mode="wait">
-            {dbProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} FilterProject={FilterProject} activeIcon={activeIcon} />
-            ))}
-          </AnimatePresence>
+          {/* <AnimatePresence mode="wait"> */}
+          {dbProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} FilterProject={FilterProject} activeIcon={activeIcon} />
+          ))}
+          {/* </AnimatePresence> */}
         </motion.ul>
       </div>
       <Outlet />
