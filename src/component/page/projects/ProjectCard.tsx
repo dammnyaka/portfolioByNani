@@ -26,7 +26,7 @@ const ProjectCard = ({ project, FilterProject, activeIcon }: Props) => {
     <>
       <motion.li variants={var1}>
         <Link to={`${project.id}`} state={{ backgroundLocation: location }}>
-          <div className={project.id === 2 ? "project_card test" : "project_card"}>
+          <div className="project_card">
             <img src={project.prev} alt="img_project" />
             <div className="project_card_info">
               <div className="project_card_name">

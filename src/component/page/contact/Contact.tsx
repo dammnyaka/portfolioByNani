@@ -64,11 +64,11 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <motion.div
-        // initial="closed"
-        // whileInView="open"
-        // exit="closed"
-        // viewport={{ amount: 0.4 }}
-        // variants={{ closed: { opacity: 0, transition: { delay: 0.15 } }, open: { opacity: 1 } }}
+        initial="closed"
+        whileInView="open"
+        exit="closed"
+        viewport={{ amount: 0.4 }}
+        variants={{ closed: { opacity: 0, transition: { delay: 0.15 } }, open: { opacity: 1 } }}
         className="contact-form"
       >
         <motion.header variants={variants}>
@@ -81,13 +81,7 @@ const Contact = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum.
         </motion.p>
-        <motion.section
-          //  initial="closed"
-          //   whileInView="open"
-          //    viewport={{ amount: 0.6 }}
-          //     exit="closed"
-          className="form"
-        >
+        <motion.section initial="closed" whileInView="open" viewport={{ amount: 0.6 }} exit="closed" className="form">
           <form ref={form} onSubmit={handleSubmit}>
             <ul>
               <motion.li variants={secVariant} custom={1}>
@@ -110,11 +104,11 @@ const Contact = () => {
         </motion.section>
       </motion.div>
       <motion.div
-        // whileInView={{ opacity: 1 }}
-        // initial={{ opacity: 0 }}
-        // viewport={{ amount: 0.4 }}
-        // exit={{ opacity: 0 }}
-        // transition={{ delay: 0.15 }}
+        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        viewport={{ amount: 0.4 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.15 }}
         className="map"
       >
         <Map />

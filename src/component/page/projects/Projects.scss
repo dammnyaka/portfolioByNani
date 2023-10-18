@@ -28,7 +28,6 @@
   float: left;
   overflow-x: hidden;
   transition: 0.4s ease-out;
-
   &:hover {
     &:before {
       opacity: 1;
@@ -89,16 +88,6 @@
     display: inline-flex;
     background-color: white;
     height: 1px;
-  }
-}
-
-.test {
-  &:before {
-    opacity: 1;
-  }
-  .project_card_info {
-    opacity: 1;
-    transform: translateY(0%);
   }
 }
 
